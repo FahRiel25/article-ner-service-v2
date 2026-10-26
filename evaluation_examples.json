@@ -1,210 +1,62 @@
 [
   {
     "article_id": "'866f27f552b2c710d71168e2b3376065f3bc082d2254fd873a777a88b6ba1d46",
-    "text": "'PTT Synergy beli 4 kilang dalam pembinaan bernilai RM32 juta di Klang sebelum disewakan 'KUALA LUMPUR 5 Okt — PTT Synergy Group Berhad bakal memperluas portfolio hartanah dengan pemerolehan empat unit kilang bernilai hampir RM32 juta di Klang, Selangor, yang disasarkan menjana pendapatan sewa berulang daripada penyewa industri. Menerusi makluman tambahan kepada Bursa Malaysia, ia berka...",
-    "entities": [
-      { "text": "PTT Synergy", "label": "ORG", "start": 1, "end": 12 },
-      { "text": "RM32 juta", "label": "MONEY", "start": 52, "end": 61 },
-      { "text": "Klang", "label": "GPE", "start": 65, "end": 70 },
-      { "text": "KUALA LUMPUR", "label": "GPE", "start": 91, "end": 103 },
-      { "text": "5 Okt", "label": "DATE", "start": 104, "end": 109 },
-      {
-        "text": "PTT Synergy Group Berhad",
-        "label": "ORG",
-        "start": 112,
-        "end": 136
-      },
-      { "text": "RM32 juta", "label": "MONEY", "start": 228, "end": 237 },
-      { "text": "Klang", "label": "GPE", "start": 241, "end": 246 },
-      { "text": "Selangor", "label": "GPE", "start": 248, "end": 256 },
-      { "text": "Bursa Malaysia", "label": "ORG", "start": 352, "end": 366 }
-    ]
+    "title": "'PTT Synergy beli 4 kilang dalam pembinaan bernilai RM32 juta di Klang sebelum disewakan",
+    "body": "'KUALA LUMPUR 5 Okt — PTT Synergy Group Berhad bakal memperluas portfolio hartanah dengan pemerolehan empat unit kilang bernilai hampir RM32 juta di Klang, Selangor, yang disasarkan menjana pendapatan sewa berulang daripada penyewa industri. Menerusi makluman tambahan kepada Bursa Malaysia, ia berka...",
+    "entities": []
   },
   {
     "article_id": "'0b88f83da42e8ab675f20b68748d6ed50ac7e42920068803dc1fc6ca471862ba",
-    "text": "'Penangan BTS! Peminat Beratur Panjang Di Cawangan Maybank Demi Kad Debit Edisi Terhad 'Penangan BTS! Peminat Beratur Panjang Di Cawangan Maybank Demi Kad Debit Edisi Terhad Kad tersebut mula ditawarkan secara rasmi di cawangan Maybank terpilih di seluruh negara hari ini....",
-    "entities": [
-      { "text": "BTS", "label": "ORG", "start": 10, "end": 13 },
-      { "text": "Maybank", "label": "ORG", "start": 51, "end": 58 },
-      { "text": "BTS", "label": "ORG", "start": 97, "end": 100 },
-      { "text": "Maybank", "label": "ORG", "start": 138, "end": 145 },
-      { "text": "Maybank", "label": "ORG", "start": 229, "end": 236 }
-    ]
+    "title": "'Penangan BTS! Peminat Beratur Panjang Di Cawangan Maybank Demi Kad Debit Edisi Terhad",
+    "body": "'Penangan BTS! Peminat Beratur Panjang Di Cawangan Maybank Demi Kad Debit Edisi Terhad Kad tersebut mula ditawarkan secara rasmi di cawangan Maybank terpilih di seluruh negara hari ini....",
+    "entities": []
   },
   {
     "article_id": "'2ddc969263f1c2d56ff45c49bdc94307749120dcbe98b158c490bd7c30f89c77",
-    "text": "'A trader’s guide to navigating Budget 2027 'KUALA LUMPUR: Malaysia’s consumer and construction stocks may emerge as beneficiaries of next year’s spending plan as Prime Minister Datuk Seri Anwar Ibrahim seeks to ease living costs while maintaining fiscal prudence. Anwar, who also serves as finance minister, is expected to announce measures to...",
-    "entities": [
-      { "text": "Budget 2027", "label": "LAW", "start": 32, "end": 43 },
-      { "text": "KUALA LUMPUR", "label": "GPE", "start": 46, "end": 58 },
-      { "text": "Malaysia", "label": "GPE", "start": 60, "end": 68 },
-      {
-        "text": "Datuk Seri Anwar Ibrahim",
-        "label": "PERSON",
-        "start": 184,
-        "end": 208
-      },
-      { "text": "Anwar", "label": "PERSON", "start": 268, "end": 273 }
-    ]
+    "title": "'A trader’s guide to navigating Budget 2027",
+    "body": "'KUALA LUMPUR: Malaysia’s consumer and construction stocks may emerge as beneficiaries of next year’s spending plan as Prime Minister Datuk Seri Anwar Ibrahim seeks to ease living costs while maintaining fiscal prudence. Anwar, who also serves as finance minister, is expected to announce measures to...",
+    "entities": []
   },
   {
     "article_id": "'4ef60d1aa96640bbfae57965d483665914994d6396e73de8a95b03f130e18e79",
-    "text": "'IOI Properties Gets Bursa Securities Approval for RM7.58b REIT Listing 'KUALA LUMPUR (Oct 1): IOI Properties Group Bhd (KL:IOIPG) said Bursa Malaysia Securities has approved the listing of its proposed RM7.58 billion IOIPG Malaysia Real Estate Investment Trust (IOIPG REIT) on the Main Market. In a filing on Thursday, the property developer said Bursa Malaysia Securitie...",
-    "entities": [
-      { "text": "IOI Properties", "label": "ORG", "start": 1, "end": 15 },
-      { "text": "Bursa Securities", "label": "ORG", "start": 21, "end": 37 },
-      { "text": "RM7.58b", "label": "MONEY", "start": 51, "end": 58 },
-      { "text": "KUALA LUMPUR", "label": "GPE", "start": 73, "end": 85 },
-      { "text": "Oct 1", "label": "DATE", "start": 87, "end": 92 },
-      {
-        "text": "IOI Properties Group Bhd",
-        "label": "ORG",
-        "start": 96,
-        "end": 120
-      },
-      {
-        "text": "Bursa Malaysia Securities",
-        "label": "ORG",
-        "start": 140,
-        "end": 165
-      },
-      { "text": "RM7.58 billion", "label": "MONEY", "start": 206, "end": 220 },
-      {
-        "text": "IOIPG Malaysia Real Estate Investment Trust",
-        "label": "ORG",
-        "start": 221,
-        "end": 264
-      },
-      { "text": "IOIPG REIT", "label": "ORG", "start": 266, "end": 276 },
-      { "text": "Thursday", "label": "DATE", "start": 315, "end": 323 },
-      {
-        "text": "Bursa Malaysia Securitie",
-        "label": "ORG",
-        "start": 353,
-        "end": 377
-      }
-    ]
+    "title": "'IOI Properties Gets Bursa Securities Approval for RM7.58b REIT Listing",
+    "body": "'KUALA LUMPUR (Oct 1): IOI Properties Group Bhd (KL:IOIPG) said Bursa Malaysia Securities has approved the listing of its proposed RM7.58 billion IOIPG Malaysia Real Estate Investment Trust (IOIPG REIT) on the Main Market. In a filing on Thursday, the property developer said Bursa Malaysia Securitie...",
+    "entities": []
   },
   {
     "article_id": "'aabf805e7464b70cd272e58c34731feadc0d1cecfe474dc0528e7bb21c10c56e",
-    "text": "'Bursa Malaysia Key Index Continues Uptrend at Midday 'Kuala Lumpur:Bursa Malaysia's key index maintained its upward trend, increasing by 0.33 percent at midday due to bargain hunting in selected heavyweights. According to BERNAMA News Agency, the FTSE Bursa Malaysia KLCI (FBM KLCI) rose by 5.44 points to 1,635.80 from the previous day's close of 1,630...",
-    "entities": [
-      { "text": "Bursa Malaysia", "label": "ORG", "start": 1, "end": 15 },
-      { "text": "Kuala Lumpur", "label": "GPE", "start": 55, "end": 67 },
-      { "text": "Bursa Malaysia", "label": "ORG", "start": 68, "end": 82 },
-      { "text": "0.33 percent", "label": "PERCENT", "start": 139, "end": 151 },
-      {
-        "text": "BERNAMA News Agency",
-        "label": "ORG",
-        "start": 224,
-        "end": 243
-      },
-      {
-        "text": "FTSE Bursa Malaysia KLCI",
-        "label": "ORG",
-        "start": 249,
-        "end": 273
-      },
-      { "text": "FBM KLCI", "label": "ORG", "start": 275, "end": 283 },
-      { "text": "5.44 points", "label": "QUANTITY", "start": 293, "end": 304 },
-      { "text": "1,635.80", "label": "CARDINAL", "start": 308, "end": 316 },
-      { "text": "1,630", "label": "CARDINAL", "start": 353, "end": 358 }
-    ]
+    "title": "'Bursa Malaysia Key Index Continues Uptrend at Midday",
+    "body": "'Kuala Lumpur:Bursa Malaysia's key index maintained its upward trend, increasing by 0.33 percent at midday due to bargain hunting in selected heavyweights. According to BERNAMA News Agency, the FTSE Bursa Malaysia KLCI (FBM KLCI) rose by 5.44 points to 1,635.80 from the previous day's close of 1,630...",
+    "entities": []
   },
   {
     "article_id": "'e0d2b4ce3359334dde7538a2da59b68a73c304b34678a722bc011b06759e0c76",
-    "text": "'Daily Newswatch - 30 Sep 2026 'The FBM KLCI ended 1.6% lower at 1,644 points on Tuesday, hitting a ninemonth low as broad-based selling pressure weighed on the market. Sentiment was dampened by rising oil prices and bond yields hovering near multi-year highs, as investors braced for interest rates to remain elevated for longer. ...",
-    "entities": [
-      { "text": "30 Sep 2026", "label": "DATE", "start": 19, "end": 30 },
-      { "text": "FBM KLCI", "label": "ORG", "start": 36, "end": 44 },
-      { "text": "1.6%", "label": "PERCENT", "start": 51, "end": 55 },
-      { "text": "1,644 points", "label": "QUANTITY", "start": 65, "end": 77 },
-      { "text": "Tuesday", "label": "DATE", "start": 81, "end": 88 }
-    ]
+    "title": "'Daily Newswatch - 30 Sep 2026",
+    "body": "'The FBM KLCI ended 1.6% lower at 1,644 points on Tuesday, hitting a ninemonth low as broad-based selling pressure weighed on the market. Sentiment was dampened by rising oil prices and bond yields hovering near multi-year highs, as investors braced for interest rates to remain elevated for longer. ...",
+    "entities": []
   },
   {
     "article_id": "'e8303b828770c3c558053f7b641fb9ba251d35b4a397ec94742a5f2007f7dcfd",
-    "text": "'CIMB Scheduled Downtime for Debit Card Users '14th September 2026 - 2 min read You won’t be able to pay with your CIMB debit card for a few hours on 19, 22, and 23 September 2026. CIMB will be doing scheduled maintenance on its debit card system during the early morning on each of these days. The break covers debit cards from both CIMB Bank an...",
-    "entities": [
-      { "text": "CIMB", "label": "ORG", "start": 1, "end": 5 },
-      {
-        "text": "14th September 2026",
-        "label": "DATE",
-        "start": 47,
-        "end": 66
-      },
-      { "text": "CIMB", "label": "ORG", "start": 116, "end": 120 },
-      {
-        "text": "19, 22, and 23 September 2026",
-        "label": "DATE",
-        "start": 151,
-        "end": 180
-      },
-      { "text": "CIMB", "label": "ORG", "start": 182, "end": 186 },
-      { "text": "CIMB Bank", "label": "ORG", "start": 339, "end": 348 }
-    ]
+    "title": "'CIMB Scheduled Downtime for Debit Card Users",
+    "body": "'14th September 2026 - 2 min read You won’t be able to pay with your CIMB debit card for a few hours on 19, 22, and 23 September 2026. CIMB will be doing scheduled maintenance on its debit card system during the early morning on each of these days. The break covers debit cards from both CIMB Bank an...",
+    "entities": []
   },
   {
     "article_id": "'a6aa5e69037fb0d0b6f8f07a233281bf5fd67d46f1fd63b3d23792c8e9af1ef5",
-    "text": "'Batu Kawan’s Takeover of MKH Crosses 95% 'KUALA LUMPUR (Sept 30): Batu Kawan Bhd’s (KL:BKAWAN) unconditional mandatory takeover of MKH Bhd (KL:MKH) has crossed the 95% threshold, paving the way for the property developer’s delisting. As at market close on Wednesday, Batu Kawan and its wholly owned unit Whitmore Holdings Sdn Bhd, together w...",
-    "entities": [
-      { "text": "Batu Kawan", "label": "ORG", "start": 1, "end": 11 },
-      { "text": "MKH", "label": "ORG", "start": 26, "end": 29 },
-      { "text": "95%", "label": "PERCENT", "start": 38, "end": 41 },
-      { "text": "KUALA LUMPUR", "label": "GPE", "start": 43, "end": 55 },
-      { "text": "Sept 30", "label": "DATE", "start": 57, "end": 64 },
-      { "text": "Batu Kawan Bhd", "label": "ORG", "start": 67, "end": 81 },
-      { "text": "MKH Bhd", "label": "ORG", "start": 133, "end": 140 },
-      { "text": "95%", "label": "PERCENT", "start": 169, "end": 172 },
-      { "text": "Wednesday", "label": "DATE", "start": 260, "end": 269 },
-      { "text": "Batu Kawan", "label": "ORG", "start": 271, "end": 281 },
-      {
-        "text": "Whitmore Holdings Sdn Bhd",
-        "label": "ORG",
-        "start": 307,
-        "end": 332
-      }
-    ]
+    "title": "'Batu Kawan’s Takeover of MKH Crosses 95%",
+    "body": "'KUALA LUMPUR (Sept 30): Batu Kawan Bhd’s (KL:BKAWAN) unconditional mandatory takeover of MKH Bhd (KL:MKH) has crossed the 95% threshold, paving the way for the property developer’s delisting. As at market close on Wednesday, Batu Kawan and its wholly owned unit Whitmore Holdings Sdn Bhd, together w...",
+    "entities": []
   },
   {
     "article_id": "'8f65047baf8ea6df51d2a0af8ca6c8e28b54c0b9eaedfef378cc94aa248dc34c",
-    "text": "'Smoky Singapore gears up to talk money ahead of F1 'SINGAPORE, Oct 5 (Reuters) - Regional, business, cryptocurrency and sports leaders are meeting in Singapore for a slew of finance-focused conferences ahead of this weekend's Grand Prix as haze continues to shroud the city-state. Philippine President Ferdinand Marcos Jr, famed investor Ray Dalio and...",
-    "entities": [
-      { "text": "Singapore", "label": "GPE", "start": 7, "end": 16 },
-      { "text": "F1", "label": "EVENT", "start": 49, "end": 51 },
-      { "text": "SINGAPORE", "label": "GPE", "start": 53, "end": 62 },
-      { "text": "Oct 5", "label": "DATE", "start": 64, "end": 69 },
-      { "text": "Reuters", "label": "ORG", "start": 71, "end": 78 },
-      { "text": "Singapore", "label": "GPE", "start": 160, "end": 169 },
-      { "text": "Grand Prix", "label": "EVENT", "start": 238, "end": 248 },
-      { "text": "Philippine", "label": "GPE", "start": 300, "end": 310 },
-      {
-        "text": "Ferdinand Marcos Jr",
-        "label": "PERSON",
-        "start": 321,
-        "end": 340
-      },
-      { "text": "Ray Dalio", "label": "PERSON", "start": 357, "end": 366 }
-    ]
+    "title": "'Smoky Singapore gears up to talk money ahead of F1",
+    "body": "'SINGAPORE, Oct 5 (Reuters) - Regional, business, cryptocurrency and sports leaders are meeting in Singapore for a slew of finance-focused conferences ahead of this weekend's Grand Prix as haze continues to shroud the city-state. Philippine President Ferdinand Marcos Jr, famed investor Ray Dalio and...",
+    "entities": []
   },
   {
     "article_id": "'120ccd292e26f7974d4e128185ddf6b3b0cbe96cc154bf518062811de8fb5561",
-    "text": "'Pesara tolak tawaran RM9,799 Maybank, tuntut semula RM48,999 'KUCHING: Seorang pesara menolak tawaran Maybank sebanyak RM9,799.99 sebagai penyelesaian penuh dan muktamad selepas kehilangan RM48,999.99 menerusi lima transaksi tanpa kebenaran daripada akaunnya.  Ahli Dewan Undangan Negeri (ADUN) Padungan, Chong Chieng Jen, berkata mangsa yang hanya dikenali seb...",
-    "entities": [
-      { "text": "RM9,799", "label": "MONEY", "start": 22, "end": 29 },
-      { "text": "Maybank", "label": "ORG", "start": 30, "end": 37 },
-      { "text": "RM48,999", "label": "MONEY", "start": 53, "end": 61 },
-      { "text": "KUCHING", "label": "GPE", "start": 63, "end": 70 },
-      { "text": "Maybank", "label": "ORG", "start": 104, "end": 111 },
-      { "text": "RM9,799.99", "label": "MONEY", "start": 121, "end": 131 },
-      { "text": "RM48,999.99", "label": "MONEY", "start": 194, "end": 205 },
-      { "text": "Padungan", "label": "GPE", "start": 299, "end": 307 },
-      {
-        "text": "Chong Chieng Jen",
-        "label": "PERSON",
-        "start": 309,
-        "end": 325
-      }
-    ]
+    "title": "'Pesara tolak tawaran RM9,799 Maybank, tuntut semula RM48,999",
+    "body": "'KUCHING: Seorang pesara menolak tawaran Maybank sebanyak RM9,799.99 sebagai penyelesaian penuh dan muktamad selepas kehilangan RM48,999.99 menerusi lima transaksi tanpa kebenaran daripada akaunnya.  Ahli Dewan Undangan Negeri (ADUN) Padungan, Chong Chieng Jen, berkata mangsa yang hanya dikenali seb...",
+    "entities": []
   }
 ]
