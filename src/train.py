@@ -14,17 +14,75 @@ def create_adapted_nlp():
 
     # Aturan tambahan untuk entitas finansial/berita lokal
     patterns = [
-        {"label": "ORG", "pattern": "Maybank"},
+    {"label": "ORG", "pattern": "Maybank"},
         {"label": "ORG", "pattern": "Bursa Malaysia"},
         {"label": "ORG", "pattern": "CIMB"},
         {"label": "ORG", "pattern": "PTT Synergy"},
+        {"label": "ORG", "pattern": "PTT Synergy Group Berhad"},
+        {"label": "ORG", "pattern": "IOI Properties"},
+        {"label": "ORG", "pattern": "IOI Properties Group Bhd"},
+        {"label": "ORG", "pattern": "Bursa Securities"},
+        {"label": "ORG", "pattern": "BERNAMA News Agency"},
+        {"label": "ORG", "pattern": "FTSE Bursa Malaysia KLCI"},
+        {"label": "ORG", "pattern": "FBM KLCI"},
+        {"label": "ORG", "pattern": "CIMB Bank"},
+        {"label": "ORG", "pattern": "Batu Kawan"},
+        {"label": "ORG", "pattern": "Batu Kawan Bhd"},
+        {"label": "ORG", "pattern": "MKH"},
+        {"label": "ORG", "pattern": "MKH Bhd"},
+        {"label": "ORG", "pattern": "Whitmore Holdings Sdn Bhd"},
+        {"label": "ORG", "pattern": "Reuters"},
+
+        # --- GPE (Lokasi / Negara / Kota) ---
         {"label": "GPE", "pattern": "Kuala Lumpur"},
         {"label": "GPE", "pattern": "Klang"},
         {"label": "GPE", "pattern": "Singapore"},
+        {"label": "GPE", "pattern": "Selangor"},
+        {"label": "GPE", "pattern": "Malaysia"},
+        {"label": "GPE", "pattern": "Kuching"},
+        {"label": "GPE", "pattern": "Padungan"},
+
+        # --- DATE ---
+        {
+            "label": "DATE",
+            "pattern": [
+                {"TEXT": {"REGEX": "^[0-9]{1,2}(st|nd|rd|th)?$"}},
+                {"LOWER": {"IN": ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec", "januari", "februari", "maret", "april", "mei", "juni", "juli", "agustus", "september", "oktober", "november", "desember", "okt", "sept"]}}
+            ]
+        },
+        {
+            "label": "DATE",
+            "pattern": [
+                {"TEXT": {"REGEX": "^[0-9]{1,2}$"}},
+                {"LOWER": {"IN": ["sep", "sept", "oct", "okt", "jan", "feb", "mar", "apr", "jun", "jul", "aug", "nov", "dec"]}},
+                {"TEXT": {"REGEX": "^[0-9]{4}$"}}
+            ]
+        },
+
+        # --- EVENT ---
+        {"label": "EVENT", "pattern": "F1"},
+        {"label": "EVENT", "pattern": "Grand Prix"},
+
+        # --- MONEY ---
+        {
+            "label": "MONEY",
+            "pattern": [
+                {"TEXT": {"REGEX": "^[Rr][Mm]$"}},
+                {"TEXT": {"REGEX": "^[0-9,]+(\\.[0-9]+)?$"}}
+            ]
+        },
+        {
+            "label": "MONEY",
+            "pattern": [
+                {"TEXT": {"REGEX": "^[Rr][Mm]$"}},
+                {"TEXT": {"REGEX": "^[0-9,]+(\\.[0-9]+)?$"}},
+                {"LOWER": {"IN": ["juta", "billion", "b", "m"]}}
+            ]
+        },
     ]
+    
     ruler.add_patterns(patterns)
     return nlp
-
 
 def compute_metrics(tp, fp, fn):
     """Menghitung nilai Precision, Recall, dan F1-Score."""
@@ -49,8 +107,11 @@ def evaluate_ground_truth(nlp, model_name="Baseline"):
     label_stats = {}
 
     for example in examples:
-        # Pembacaan teks aman (fallback jika kunci 'text' tidak tersedia)
-        text = example.get("text") or f"{example.get('title', '')}. {example.get('body', '')}".strip()
+
+        title = example.get("title", "").strip()
+        body = example.get("body", "").strip()
+
+        text = example.get("text") or f"{title}. {body}".strip().strip()
 
         expected_entities = {
             (e["start"], e["end"], e["label"]) for e in example.get("entities", [])
