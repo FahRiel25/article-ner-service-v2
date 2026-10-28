@@ -1,498 +1,146 @@
 [
-  {
-    "article_id": "'866f27f552b2c710d71168e2b3376065f3bc082d2254fd873a777a88b6ba1d46",
-    "title": "'PTT Synergy beli 4 kilang dalam pembinaan bernilai RM32 juta di Klang sebelum disewakan",
-    "body": "'KUALA LUMPUR 5 Okt — PTT Synergy Group Berhad bakal memperluas portfolio hartanah dengan pemerolehan empat unit kilang bernilai hampir RM32 juta di Klang, Selangor, yang disasarkan menjana pendapatan sewa berulang daripada penyewa industri. Menerusi makluman tambahan kepada Bursa Malaysia, ia berka...",
-    "entities": [
-      {
-        "text": "PTT Synergy",
-        "label": "ORG",
-        "start": 1,
-        "end": 12
-      },
-      {
-        "text": "RM32 juta",
-        "label": "MONEY",
-        "start": 48,
-        "end": 57
-      },
-      {
-        "text": "Klang",
-        "label": "GPE",
-        "start": 61,
-        "end": 66
-      },
-      {
-        "text": "KUALA LUMPUR",
-        "label": "GPE",
-        "start": 95,
-        "end": 107
-      },
-      {
-        "text": "5 Okt",
-        "label": "DATE",
-        "start": 108,
-        "end": 113
-      },
-      {
-        "text": "PTT Synergy Group Berhad",
-        "label": "ORG",
-        "start": 116,
-        "end": 140
-      },
-      {
-        "text": "RM32 juta",
-        "label": "MONEY",
-        "start": 204,
-        "end": 213
-      },
-      {
-        "text": "Klang",
-        "label": "GPE",
-        "start": 217,
-        "end": 222
-      },
-      {
-        "text": "Selangor",
-        "label": "GPE",
-        "start": 224,
-        "end": 232
-      },
-      {
-        "text": "Bursa Malaysia",
-        "label": "ORG",
-        "start": 313,
-        "end": 327
-      }
-    ]
-  },
-  {
-    "article_id": "'0b88f83da42e8ab675f20b68748d6ed50ac7e42920068803dc1fc6ca471862ba",
-    "title": "'Penangan BTS! Peminat Beratur Panjang Di Cawangan Maybank Demi Kad Debit Edisi Terhad",
-    "body": "'Penangan BTS! Peminat Beratur Panjang Di Cawangan Maybank Demi Kad Debit Edisi Terhad Kad tersebut mula ditawarkan secara rasmi di cawangan Maybank terpilih di seluruh negara hari ini....",
-    "entities": [
-      {
-        "text": "BTS",
-        "label": "ORG",
-        "start": 10,
-        "end": 13
-      },
-      {
-        "text": "Maybank",
-        "label": "ORG",
-        "start": 43,
-        "end": 50
-      },
-      {
-        "text": "BTS",
-        "label": "ORG",
-        "start": 98,
-        "end": 101
-      },
-      {
-        "text": "Maybank",
-        "label": "ORG",
-        "start": 160,
-        "end": 167
-      }
-    ]
-  },
-  {
-    "article_id": "'2ddc969263f1c2d56ff45c49bdc94307749120dcbe98b158c490bd7c30f89c77",
-    "title": "'A trader’s guide to navigating Budget 2027",
-    "body": "'KUALA LUMPUR: Malaysia’s consumer and construction stocks may emerge as beneficiaries of next year’s spending plan as Prime Minister Datuk Seri Anwar Ibrahim seeks to ease living costs while maintaining fiscal prudence. Anwar, who also serves as finance minister, is expected to announce measures to...",
-    "entities": [
-      {
-        "text": "Budget 2027",
-        "label": "DATE",
-        "start": 30,
-        "end": 41
-      },
-      {
-        "text": "KUALA LUMPUR",
-        "label": "GPE",
-        "start": 44,
-        "end": 56
-      },
-      {
-        "text": "Malaysia",
-        "label": "GPE",
-        "start": 58,
-        "end": 66
-      },
-      {
-        "text": "Datuk Seri Anwar Ibrahim",
-        "label": "PERSON",
-        "start": 181,
-        "end": 205
-      },
-      {
-        "text": "Anwar",
-        "label": "PERSON",
-        "start": 234,
-        "end": 239
-      }
-    ]
-  },
-  {
-    "article_id": "'4ef60d1aa96640bbfae57965d483665914994d6396e73de8a95b03f130e18e79",
-    "title": "'IOI Properties Gets Bursa Securities Approval for RM7.58b REIT Listing",
-    "body": "'KUALA LUMPUR (Oct 1): IOI Properties Group Bhd (KL:IOIPG) said Bursa Malaysia Securities has approved the listing of its proposed RM7.58 billion IOIPG Malaysia Real Estate Investment Trust (IOIPG REIT) on the Main Market. In a filing on Thursday, the property developer said Bursa Malaysia Securitie...",
-    "entities": [
-      {
-        "text": "IOI Properties",
-        "label": "ORG",
-        "start": 1,
-        "end": 15
-      },
-      {
-        "text": "Bursa Securities",
-        "label": "ORG",
-        "start": 20,
-        "end": 36
-      },
-      {
-        "text": "RM7.58b",
-        "label": "MONEY",
-        "start": 45,
-        "end": 52
-      },
-      {
-        "text": "KUALA LUMPUR",
-        "label": "GPE",
-        "start": 72,
-        "end": 84
-      },
-      {
-        "text": "Oct 1",
-        "label": "DATE",
-        "start": 86,
-        "end": 91
-      },
-      {
-        "text": "IOI Properties Group Bhd",
-        "label": "ORG",
-        "start": 95,
-        "end": 119
-      },
-      {
-        "text": "Bursa Malaysia Securities",
-        "label": "ORG",
-        "start": 147,
-        "end": 172
-      },
-      {
-        "text": "RM7.58 billion",
-        "label": "MONEY",
-        "start": 209,
-        "end": 223
-      }
-    ]
-  },
-  {
-    "article_id": "'aabf805e7464b70cd272e58c34731feadc0d1cecfe474dc0528e7bb21c10c56e",
-    "title": "'Bursa Malaysia Key Index Continues Uptrend at Midday",
-    "body": "'Kuala Lumpur:Bursa Malaysia's key index maintained its upward trend, increasing by 0.33 percent at midday due to bargain hunting in selected heavyweights. According to BERNAMA News Agency, the FTSE Bursa Malaysia KLCI (FBM KLCI) rose by 5.44 points to 1,635.80 from the previous day's close of 1,630...",
-    "entities": [
-      {
-        "text": "Bursa Malaysia",
-        "label": "ORG",
-        "start": 1,
-        "end": 15
-      },
-      {
-        "text": "Kuala Lumpur",
-        "label": "GPE",
-        "start": 54,
-        "end": 66
-      },
-      {
-        "text": "Bursa Malaysia",
-        "label": "ORG",
-        "start": 67,
-        "end": 81
-      },
-      {
-        "text": "BERNAMA News Agency",
-        "label": "ORG",
-        "start": 178,
-        "end": 197
-      },
-      {
-        "text": "FTSE Bursa Malaysia KLCI",
-        "label": "ORG",
-        "start": 203,
-        "end": 227
-      },
-      {
-        "text": "FBM KLCI",
-        "label": "ORG",
-        "start": 229,
-        "end": 237
-      }
-    ]
-  },
-  {
-    "article_id": "'e0d2b4ce3359334dde7538a2da59b68a73c304b34678a722bc011b06759e0c76",
-    "title": "'Daily Newswatch - 30 Sep 2026",
-    "body": "'The FBM KLCI ended 1.6% lower at 1,644 points on Tuesday, hitting a ninemonth low as broad-based selling pressure weighed on the market. Sentiment was dampened by rising oil prices and bond yields hovering near multi-year highs, as investors braced for interest rates to remain elevated for longer. ...",
-    "entities": [
-      {
-        "text": "30 Sep 2026",
-        "label": "DATE",
-        "start": 16,
-        "end": 27
-      },
-      {
-        "text": "FBM KLCI",
-        "label": "ORG",
-        "start": 34,
-        "end": 42
-      },
-      {
-        "text": "1.6%",
-        "label": "PERCENT",
-        "start": 50,
-        "end": 54
-      },
-      {
-        "text": "Tuesday",
-        "label": "DATE",
-        "start": 84,
-        "end": 91
-      }
-    ]
-  },
-  {
-    "article_id": "'e8303b828770c3c558053f7b641fb9ba251d35b4a397ec94742a5f2007f7dcfd",
-    "title": "'CIMB Scheduled Downtime for Debit Card Users",
-    "body": "'14th September 2026 - 2 min read You won’t be able to pay with your CIMB debit card for a few hours on 19, 22, and 23 September 2026. CIMB will be doing scheduled maintenance on its debit card system during the early morning on each of these days. The break covers debit cards from both CIMB Bank an...",
-    "entities": [
-      {
-        "text": "CIMB",
-        "label": "ORG",
-        "start": 1,
-        "end": 5
-      },
-      {
-        "text": "14th September 2026",
-        "label": "DATE",
-        "start": 48,
-        "end": 67
-      },
-      {
-        "text": "CIMB",
-        "label": "ORG",
-        "start": 119,
-        "end": 123
-      },
-      {
-        "text": "19, 22, and 23 September 2026",
-        "label": "DATE",
-        "start": 158,
-        "end": 187
-      },
-      {
-        "text": "CIMB",
-        "label": "ORG",
-        "start": 189,
-        "end": 193
-      },
-      {
-        "text": "CIMB Bank",
-        "label": "ORG",
-        "start": 294,
-        "end": 303
-      }
-    ]
-  },
-  {
-    "article_id": "'a6aa5e69037fb0d0b6f8f07a233281bf5fd67d46f1fd63b3d23792c8e9af1ef5",
-    "title": "'Batu Kawan’s Takeover of MKH Crosses 95%",
-    "body": "'KUALA LUMPUR (Sept 30): Batu Kawan Bhd’s (KL:BKAWAN) unconditional mandatory takeover of MKH Bhd (KL:MKH) has crossed the 95% threshold, paving the way for the property developer’s delisting. As at market close on Wednesday, Batu Kawan and its wholly owned unit Whitmore Holdings Sdn Bhd, together w...",
-    "entities": [
-      {
-        "text": "Batu Kawan",
-        "label": "ORG",
-        "start": 1,
-        "end": 11
-      },
-      {
-        "text": "MKH",
-        "label": "ORG",
-        "start": 30,
-        "end": 33
-      },
-      {
-        "text": "95%",
-        "label": "PERCENT",
-        "start": 38,
-        "end": 41
-      },
-      {
-        "text": "KUALA LUMPUR",
-        "label": "GPE",
-        "start": 45,
-        "end": 57
-      },
-      {
-        "text": "Sept 30",
-        "label": "DATE",
-        "start": 59,
-        "end": 66
-      },
-      {
-        "text": "Batu Kawan Bhd",
-        "label": "ORG",
-        "start": 70,
-        "end": 84
-      },
-      {
-        "text": "MKH Bhd",
-        "label": "ORG",
-        "start": 116,
-        "end": 123
-      },
-      {
-        "text": "95%",
-        "label": "PERCENT",
-        "start": 141,
-        "end": 144
-      },
-      {
-        "text": "Batu Kawan",
-        "label": "ORG",
-        "start": 234,
-        "end": 244
-      },
-      {
-        "text": "Whitmore Holdings Sdn Bhd",
-        "label": "ORG",
-        "start": 274,
-        "end": 299
-      }
-    ]
-  },
-  {
-    "article_id": "'8f65047baf8ea6df51d2a0af8ca6c8e28b54c0b9eaedfef378cc94aa248dc34c",
-    "title": "'Smoky Singapore gears up to talk money ahead of F1",
-    "body": "'SINGAPORE, Oct 5 (Reuters) - Regional, business, cryptocurrency and sports leaders are meeting in Singapore for a slew of finance-focused conferences ahead of this weekend's Grand Prix as haze continues to shroud the city-state. Philippine President Ferdinand Marcos Jr, famed investor Ray Dalio and...",
-    "entities": [
-      {
-        "text": "Singapore",
-        "label": "GPE",
-        "start": 7,
-        "end": 16
-      },
-      {
-        "text": "F1",
-        "label": "EVENT",
-        "start": 48,
-        "end": 50
-      },
-      {
-        "text": "SINGAPORE",
-        "label": "GPE",
-        "start": 54,
-        "end": 63
-      },
-      {
-        "text": "Oct 5",
-        "label": "DATE",
-        "start": 65,
-        "end": 70
-      },
-      {
-        "text": "Reuters",
-        "label": "ORG",
-        "start": 73,
-        "end": 80
-      },
-      {
-        "text": "Singapore",
-        "label": "GPE",
-        "start": 154,
-        "end": 163
-      },
-      {
-        "text": "Philippine",
-        "label": "NORP",
-        "start": 247,
-        "end": 257
-      },
-      {
-        "text": "Ferdinand Marcos Jr",
-        "label": "PERSON",
-        "start": 270,
-        "end": 289
-      },
-      {
-        "text": "Ray Dalio",
-        "label": "PERSON",
-        "start": 309,
-        "end": 318
-      }
-    ]
-  },
-  {
-    "article_id": "'120ccd292e26f7974d4e128185ddf6b3b0cbe96cc154bf518062811de8fb5561",
-    "title": "'Pesara tolak tawaran RM9,799 Maybank, tuntut semula RM48,999",
-    "body": "'KUCHING: Seorang pesara menolak tawaran Maybank sebanyak RM9,799.99 sebagai penyelesaian penuh dan muktamad selepas kehilangan RM48,999.99 menerusi lima transaksi tanpa kebenaran daripada akaunnya.  Ahli Dewan Undangan Negeri (ADUN) Padungan, Chong Chieng Jen, berkata mangsa yang hanya dikenali seb...",
-    "entities": [
-      {
-        "text": "RM9,799",
-        "label": "MONEY",
-        "start": 21,
-        "end": 28
-      },
-      {
-        "text": "Maybank",
-        "label": "ORG",
-        "start": 29,
-        "end": 36
-      },
-      {
-        "text": "RM48,999",
-        "label": "MONEY",
-        "start": 51,
-        "end": 59
-      },
-      {
-        "text": "KUCHING",
-        "label": "GPE",
-        "start": 62,
-        "end": 69
-      },
-      {
-        "text": "Maybank",
-        "label": "ORG",
-        "start": 105,
-        "end": 112
-      },
-      {
-        "text": "RM9,799.99",
-        "label": "MONEY",
-        "start": 123,
-        "end": 133
-      },
-      {
-        "text": "RM48,999.99",
-        "label": "MONEY",
-        "start": 178,
-        "end": 189
-      },
-      {
-        "text": "Padungan",
-        "label": "GPE",
-        "start": 289,
-        "end": 297
-      },
-      {
-        "text": "Chong Chieng Jen",
-        "label": "PERSON",
-        "start": 300,
-        "end": 316
-      }
-    ]
-  }
+    {
+        "original_id": "'2b2a61097c5e6b98e5c9af4a993ac0e1418294d3cbfd554fa13b16af4eaa633d",
+        "text": "'Bursa Malaysia Stays Lower at Mid-Morning Trailed by Heavyweight Selling. 'Bursa Malaysia remained firmly in negative territory at mid-morning on Thursday, October 1, 2026, dragged down by selling pressure across key blue-chip counters, primarily in healthcare, industrial products, and utilities sectors. At 11:00 AM, the benchmark FTSE Bursa Malaysia KLCI (FBM KLCI) slid 11.73 points to 1,639.44 compared to Wednesday’s close of 1,651.17. The index had opened 1.30 points lower at 1,649.87. Marke...",
+        "expected_entities": [
+            {"text": "Bursa Malaysia", "label": "ORG"},
+            {"text": "Mid-Morning", "label": "DATE"},
+            {"text": "mid-morning", "label": "DATE"},
+            {"text": "Thursday", "label": "DATE"},
+            {"text": "October 1, 2026", "label": "DATE"},
+            {"text": "11:00 AM", "label": "DATE"},
+            {"text": "FTSE Bursa Malaysia KLCI", "label": "ORG"},
+            {"text": "FBM KLCI", "label": "ORG"},
+            {"text": "Wednesday", "label": "DATE"}
+        ]
+    },
+    {
+        "original_id": "'5628d43ec0e9286b505bdc2debc72229afb26618bdb59a88c760c0a620b409e0",
+        "text": "'Bursa Sheds 2.4% For Week As Yields, Foreign Selling Hit Sentiment. 'Bursa Malaysia ended the Sept 28-Oct 2 week sharply lower, with the FTSE Bursa Malaysia KLCI (FBM KLCI) losing 40.75 points, or 2.4%, to 1,630.87 from the previous Friday’s 1,671.62, as rising global bond yields, elevated oil prices and persistent foreign selling weighed on sentiment.  The benchmark started the week marginally lower, slipping 0.09% to 1,670.02 on Sept 28, as investors remained cautious amid a lack of fresh cat...",
+        "expected_entities": [
+            {"text": "Bursa", "label": "ORG"},
+            {"text": "Week", "label": "DATE"},
+            {"text": "Bursa Malaysia", "label": "ORG"},
+            {"text": "Sept 28-Oct 2 week", "label": "DATE"},
+            {"text": "FTSE Bursa Malaysia KLCI", "label": "ORG"},
+            {"text": "FBM KLCI", "label": "ORG"},
+            {"text": "the previous Friday", "label": "DATE"},
+            {"text": "the week", "label": "DATE"},
+            {"text": "Sept 28", "label": "DATE"}
+        ]
+    },
+    {
+        "original_id": "'213c7a0f57ba0fb8c40ce41c2eb36e2a5c19553ac3cee0ea824889f6933014b2",
+        "text": "'Bursa Malaysia Midday Losses Continue Amid Selling Pressure. 'Kuala Lumpur:Bursa Malaysia extended its downtrend at midday, influenced by selling pressure and a mixed global market performance, as risk sentiment remained restrained by the continuous rise in United States Treasury yields. According to BERNAMA News Agency, at 12.30 pm, the FTSE Bursa Malaysia KLCI (FBM KLCI) dropped 15.36 points to 1,635.81 from the previous day's close of 1,651.17. The benchmark index opened 1.30 points lower at...",
+        "expected_entities": [
+            {"text": "Bursa Malaysia", "label": "ORG"},
+            {"text": "Midday", "label": "DATE"},
+            {"text": "Kuala Lumpur", "label": "GPE"},
+            {"text": "midday", "label": "DATE"},
+            {"text": "United States", "label": "GPE"},
+            {"text": "BERNAMA News Agency", "label": "ORG"},
+            {"text": "12.30 pm", "label": "DATE"},
+            {"text": "FTSE Bursa Malaysia KLCI", "label": "ORG"},
+            {"text": "FBM KLCI", "label": "ORG"},
+            {"text": "the previous day", "label": "DATE"}
+        ]
+    },
+    {
+        "original_id": "'119d2588c8cd46bddd96841629ffe1f0a8350775706e7495de3d8fd3b329e250",
+        "text": "'Are Chinese Malaysian-owned SMEs being ‘killed’ by the China onslaught?. 'The Gut Shot Podcast is joined by its geopolitical and economic consultant to governments and companies, Jason Leong. Signals from the ground have now raised alarm among segments of the Chinese Malaysian community. Malaysia’s private sector economy is largely driven by local ethnic Chinese businesses. Unlike the ecosystem of government-linked firms and investment companies, the private sector economy has none of the prote...",
+        "expected_entities": [
+            {"text": "China", "label": "GPE"},
+            {"text": "The Gut Shot Podcast", "label": "ORG"},
+            {"text": "Jason Leong", "label": "PERSON"},
+            {"text": "Malaysia", "label": "GPE"}
+        ]
+    },
+    {
+        "original_id": "'2459fbe7917aad3c46368f5ed56e10be67794159990d9b7660eaa7d8017512d3",
+        "text": "'Private Deal: Celebrity-founded nasi padang restaurant chain Bumbu Babah aims to raise RM20 mil. 'Private Deal: Celebrity-founded nasi padang restaurant chain Bumbu Babah aims to raise RM20 mil This article first appeared in Wealth, The Edge Malaysia Weekly on September 28, 2026 - October 4, 2026 Transitioning from the entertainment industry to the food and beverage (F&B) sector is not easy, but when comedian Ajak Shiro heard his child express a desire to start a fried chicken business, he thou...",
+        "expected_entities": [
+            {"text": "Bumbu Babah", "label": "ORG"},
+            {"text": "Wealth", "label": "ORG"},
+            {"text": "The Edge Malaysia Weekly", "label": "ORG"},
+            {"text": "September 28, 2026 - October 4, 2026", "label": "DATE"},
+            {"text": "Ajak Shiro", "label": "PERSON"}
+        ]
+    },
+    {
+        "original_id": "'973d82a62e5d8e391c625cdbd70ba079ad544798398f6fa34bd3bb88cbcdebac",
+        "text": "'[VIDEO] ‘Baru Hendak Tulis Muka Surat Pertama’ – Syed Saddiq & Bella Astillah Akui Tak Layak Disamakan Dengan Tun M & Allahyarhamah Tun Hasmah. 'Ahli Parlimen Muar, Syed Saddiq dan bakal isterinya, Bella Astillah tidak bersetuju dengan kenyataan yang menyamakan kisah cinta mereka dengan pasangan negarawan, Tun Dr Mahathir Mohamad dan Allahyarhamah Tun Dr Siti Hasmah Mohamad Ali. Artikel Berkaitan: Bella Astillah Kongsi Keadaan Syed Saddiq – ‘Dia Tak Mampu Teruskan Apa Yang Telah Dirancang Hari ...",
+        "expected_entities": [
+            {"text": "Syed Saddiq", "label": "PERSON"},
+            {"text": "Bella Astillah", "label": "PERSON"},
+            {"text": "Tun M", "label": "PERSON"},
+            {"text": "Tun Hasmah", "label": "PERSON"},
+            {"text": "Muar", "label": "GPE"},
+            {"text": "Tun Dr Mahathir Mohamad", "label": "PERSON"},
+            {"text": "Tun Dr Siti Hasmah Mohamad Ali", "label": "PERSON"}
+        ]
+    },
+    {
+        "original_id": "'e937da3556c44fb045b0ebe178f1e8904c26321d2d13e6e960d9b06916ff30b5",
+        "text": "'HLIB Retail Research – Tradersbrief 30 Sep. 'Asian markets traded mostly lower as elevated bond yields and oil prices kept risk appetite cautious, while China’s equities edged higher on expectations of stronger policy support and the RBA raised its cash rate by 25bps to 4.60%, a 15-year high, as inflation remained above target. Meanwhile, Brent crude climbed to ~USD106/bbl amid continued US-Iran tensions and uncertainty over Strait of Hormuz traffic. US Treasury yields remained elevated, with t...",
+        "expected_entities": [
+            {"text": "HLIB Retail Research", "label": "ORG"},
+            {"text": "30 Sep", "label": "DATE"},
+            {"text": "Asian", "label": "GPE"},
+            {"text": "China", "label": "GPE"},
+            {"text": "RBA", "label": "ORG"},
+            {"text": "15-year", "label": "DATE"},
+            {"text": "Brent", "label": "ORG"},
+            {"text": "US", "label": "GPE"},
+            {"text": "Iran", "label": "GPE"},
+            {"text": "Strait of Hormuz", "label": "GPE"}
+        ]
+    },
+    {
+        "original_id": "'100ce21748571e87d6782b3105f231f74471a61ca99e3021a4174663a6fa41c2",
+        "text": "'Bursa Malaysia Opens Higher Amid Easing US Treasury Yields. 'Kuala Lumpur:Bursa Malaysia saw a marginal increase at the opening on Friday, buoyed by the easing of US Treasury yields and a tempered tone from the Federal Reserve, which brought some relief to the market sentiment. According to BERNAMA News Agency, at 9.10 am, the FTSE Bursa Malaysia KLCI (FBM KLCI) rose by 1.49 points, or 0.09 per cent, to reach 1,631.85, up from Thursday's close of 1,630.36. The index had initially opened 3.51 po...",
+        "expected_entities": [
+            {"text": "Bursa Malaysia", "label": "ORG"},
+            {"text": "US", "label": "GPE"},
+            {"text": "Kuala Lumpur", "label": "GPE"},
+            {"text": "Friday", "label": "DATE"},
+            {"text": "Federal Reserve", "label": "ORG"},
+            {"text": "BERNAMA News Agency", "label": "ORG"},
+            {"text": "9.10 am", "label": "DATE"},
+            {"text": "FTSE Bursa Malaysia KLCI", "label": "ORG"},
+            {"text": "FBM KLCI", "label": "ORG"},
+            {"text": "Thursday", "label": "DATE"}
+        ]
+    },
+    {
+        "original_id": "'8f65047baf8ea6df51d2a0af8ca6c8e28b54c0b9eaedfef378cc94aa248dc34c",
+        "text": "'Smoky Singapore gears up to talk money ahead of F1. 'SINGAPORE, Oct 5 (Reuters) - Regional, business, cryptocurrency and sports leaders are meeting in Singapore for a slew of finance-focused conferences ahead of this weekend's Grand Prix as haze continues to shroud the city-state. Philippine President Ferdinand Marcos Jr, famed investor Ray Dalio and Eric Trump, co-founder of the family-backed cryptocurrency business, are expected, while hundreds of thousands of Formula 1 fans will converge on ...",
+        "expected_entities": [
+            {"text": "Singapore", "label": "GPE"},
+            {"text": "F1", "label": "ORG"},
+            {"text": "SINGAPORE", "label": "GPE"},
+            {"text": "Oct 5", "label": "DATE"},
+            {"text": "Reuters", "label": "ORG"},
+            {"text": "this weekend", "label": "DATE"},
+            {"text": "Grand Prix", "label": "ORG"},
+            {"text": "Philippine", "label": "GPE"},
+            {"text": "Ferdinand Marcos Jr", "label": "PERSON"},
+            {"text": "Ray Dalio", "label": "PERSON"},
+            {"text": "Eric Trump", "label": "PERSON"},
+            {"text": "Formula 1", "label": "ORG"}
+        ]
+    },
+    {
+        "original_id": "'23f68bbfb01e404e07fac4b29818a8a9e5fd1e01e8377a23988ff255fbb591d7",
+        "text": "'Make The Edge Malaysia your preferred source on Google. 'KUALA LUMPUR (Oct 1): Malayan Banking Bhd (KL: MAYBANK) fell below RM10 for the first time in nearly nine months and banking stocks mostly declined on Thursday amid rising bond yields.  Higher yields generally hurt banks as they take larger paper losses from lower prices of the bonds they hold, which eats into capital and forces them to book losses if they sell. Banks will also have to increase their rates to attract depositors, leading t...",
+        "expected_entities": [
+            {"text": "The Edge Malaysia", "label": "ORG"},
+            {"text": "Google", "label": "ORG"},
+            {"text": "KUALA LUMPUR", "label": "GPE"},
+            {"text": "Oct 1", "label": "DATE"},
+            {"text": "Malayan Banking Bhd", "label": "ORG"},
+            {"text": "MAYBANK", "label": "ORG"},
+            {"text": "nine months", "label": "DATE"},
+            {"text": "Thursday", "label": "DATE"}
+        ]
+    }
 ]

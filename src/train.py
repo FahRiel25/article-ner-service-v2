@@ -3,214 +3,123 @@ import os
 import pandas as pd
 import spacy
 
-EVAL_JSON = "evaluation_examples.json"
-VAL_CSV = "data/val.csv"
+class BaselineNER:
+    def __init__(self):
+        self.nlp = spacy.load("en_core_web_sm")
 
+    def extract(self, text):
+        doc = self.nlp(text)
+        return [{"text": ent.text, "label": ent.label_, "start": ent.start_char, "end": ent.end_char} for ent in doc.ents]
 
-def create_adapted_nlp():
-    """Membuat model spaCy yang di-adaptasi/dikalibrasi dengan EntityRuler."""
-    nlp = spacy.load("en_core_web_sm")
-    ruler = nlp.add_pipe("entity_ruler", before="ner")
-
-    # Aturan tambahan untuk entitas finansial/berita lokal
-    patterns = [
-    {"label": "ORG", "pattern": "Maybank"},
-        {"label": "ORG", "pattern": "Bursa Malaysia"},
-        {"label": "ORG", "pattern": "CIMB"},
-        {"label": "ORG", "pattern": "PTT Synergy"},
-        {"label": "ORG", "pattern": "PTT Synergy Group Berhad"},
-        {"label": "ORG", "pattern": "IOI Properties"},
-        {"label": "ORG", "pattern": "IOI Properties Group Bhd"},
-        {"label": "ORG", "pattern": "Bursa Securities"},
-        {"label": "ORG", "pattern": "BERNAMA News Agency"},
-        {"label": "ORG", "pattern": "FTSE Bursa Malaysia KLCI"},
-        {"label": "ORG", "pattern": "FBM KLCI"},
-        {"label": "ORG", "pattern": "CIMB Bank"},
-        {"label": "ORG", "pattern": "Batu Kawan"},
-        {"label": "ORG", "pattern": "Batu Kawan Bhd"},
-        {"label": "ORG", "pattern": "MKH"},
-        {"label": "ORG", "pattern": "MKH Bhd"},
-        {"label": "ORG", "pattern": "Whitmore Holdings Sdn Bhd"},
-        {"label": "ORG", "pattern": "Reuters"},
-
-        # --- GPE (Lokasi / Negara / Kota) ---
-        {"label": "GPE", "pattern": "Kuala Lumpur"},
-        {"label": "GPE", "pattern": "Klang"},
-        {"label": "GPE", "pattern": "Singapore"},
-        {"label": "GPE", "pattern": "Selangor"},
-        {"label": "GPE", "pattern": "Malaysia"},
-        {"label": "GPE", "pattern": "Kuching"},
-        {"label": "GPE", "pattern": "Padungan"},
-
-        # --- DATE ---
-        {
-            "label": "DATE",
-            "pattern": [
-                {"TEXT": {"REGEX": "^[0-9]{1,2}(st|nd|rd|th)?$"}},
-                {"LOWER": {"IN": ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec", "januari", "februari", "maret", "april", "mei", "juni", "juli", "agustus", "september", "oktober", "november", "desember", "okt", "sept"]}}
-            ]
-        },
-        {
-            "label": "DATE",
-            "pattern": [
-                {"TEXT": {"REGEX": "^[0-9]{1,2}$"}},
-                {"LOWER": {"IN": ["sep", "sept", "oct", "okt", "jan", "feb", "mar", "apr", "jun", "jul", "aug", "nov", "dec"]}},
-                {"TEXT": {"REGEX": "^[0-9]{4}$"}}
-            ]
-        },
-
-        # --- EVENT ---
-        {"label": "EVENT", "pattern": "F1"},
-        {"label": "EVENT", "pattern": "Grand Prix"},
-
-        # --- MONEY ---
-        {
-            "label": "MONEY",
-            "pattern": [
-                {"TEXT": {"REGEX": "^[Rr][Mm]$"}},
-                {"TEXT": {"REGEX": "^[0-9,]+(\\.[0-9]+)?$"}}
-            ]
-        },
-        {
-            "label": "MONEY",
-            "pattern": [
-                {"TEXT": {"REGEX": "^[Rr][Mm]$"}},
-                {"TEXT": {"REGEX": "^[0-9,]+(\\.[0-9]+)?$"}},
-                {"LOWER": {"IN": ["juta", "billion", "b", "m"]}}
-            ]
-        },
-    ]
-    
-    ruler.add_patterns(patterns)
-    return nlp
-
-def compute_metrics(tp, fp, fn):
-    """Menghitung nilai Precision, Recall, dan F1-Score."""
-    p = tp / (tp + fp) if (tp + fp) > 0 else 0.0
-    r = tp / (tp + fn) if (tp + fn) > 0 else 0.0
-    f1 = 2 * (p * r) / (p + r) if (p + r) > 0 else 0.0
-    return p, r, f1
-
-
-def evaluate_ground_truth(nlp, model_name="Baseline"):
-    """Mengevaluasi performa model menggunakan evaluation_examples.json."""
-    if not os.path.exists(EVAL_JSON):
-        print(f"Error: File {EVAL_JSON} tidak ditemukan.")
-        return
-
-    with open(EVAL_JSON, "r", encoding="utf-8") as f:
-        examples = json.load(f)
-
-    true_positives = 0
-    false_positives = 0
-    false_negatives = 0
-    label_stats = {}
-
-    for example in examples:
-
-        title = example.get("title", "").strip()
-        body = example.get("body", "").strip()
-
-        text = example.get("text") or f"{title}. {body}".strip().strip()
-
-        expected_entities = {
-            (e["start"], e["end"], e["label"]) for e in example.get("entities", [])
-        }
-
-        doc = nlp(text)
-        predicted_entities = {
-            (ent.start_char, ent.end_char, ent.label_) for ent in doc.ents
-        }
-
-        tp = len(expected_entities.intersection(predicted_entities))
-        fp = len(predicted_entities - expected_entities)
-        fn = len(expected_entities - predicted_entities)
-
-        true_positives += tp
-        false_positives += fp
-        false_negatives += fn
-
-        # Perhitungan breakdown metrik per-label
-        all_labels = {e[2] for e in expected_entities}.union({p[2] for p in predicted_entities})
-        for lbl in all_labels:
-            if lbl not in label_stats:
-                label_stats[lbl] = {"tp": 0, "fp": 0, "fn": 0}
-            exp_lbl = {e for e in expected_entities if e[2] == lbl}
-            pred_lbl = {p for p in predicted_entities if p[2] == lbl}
-
-            label_stats[lbl]["tp"] += len(exp_lbl.intersection(pred_lbl))
-            label_stats[lbl]["fp"] += len(pred_lbl - exp_lbl)
-            label_stats[lbl]["fn"] += len(exp_lbl - pred_lbl)
-
-    precision, recall, f1 = compute_metrics(true_positives, false_positives, false_negatives)
-
-    print(f"\n=== HASIL EVALUASI METRIK QUANTITATIVE ({model_name}) ===")
-    print(f"Overall Exact-Span Precision : {precision:.4f}")
-    print(f"Overall Exact-Span Recall    : {recall:.4f}")
-    print(f"Overall Exact-Span F1-Score  : {f1:.4f}")
-
-    print("\n--- Breakdown Metrik Per-Label ---")
-    for lbl, st in sorted(label_stats.items()):
-        lp, lr, lf1 = compute_metrics(st["tp"], st["fp"], st["fn"])
-        print(f" Label {lbl:<10} | Precision: {lp:.4f} | Recall: {lr:.4f} | F1-Score: {lf1:.4f}")
-
-
-def sample_val_extraction(nlp, n_samples=3):
-    """Mengambil sampel ekstraksi entitas dari data/val.csv."""
-    if not os.path.exists(VAL_CSV):
-        print(f"Warning: File {VAL_CSV} tidak ditemukan.")
-        return
-
-    df_val = pd.read_csv(VAL_CSV, sep=";", low_memory=False, on_bad_lines="skip")
-    df_val.columns = df_val.columns.str.strip().str.replace("'", "")
-
-    print("\n=== HASIL EKSTRAKSI SAMPLE VAL SET ===")
-
-    title_col = next((c for c in df_val.columns if "title" in c.lower()), None)
-    body_col = next((c for c in df_val.columns if "body" in c.lower()), None)
-
-    for idx, row in df_val.head(n_samples).iterrows():
-        title_val = (
-            row[title_col]
-            if title_col and pd.notna(row[title_col])
-            else (row.iloc[1] if len(row) > 1 else "")
-        )
-        body_val = (
-            row[body_col]
-            if body_col and pd.notna(row[body_col])
-            else (row.iloc[2] if len(row) > 2 else "")
-        )
-
-        title = str(title_val).strip()
-        body = str(body_val).strip()
-        text = f"{title}. {body}".strip() if title and body else title or body
-
-        doc = nlp(text)
-
-        entities = [
-            {
-                "text": ent.text,
-                "label": ent.label_,
-                "start": ent.start_char,
-                "end": ent.end_char,
-            }
-            for ent in doc.ents
+class AdaptedNER:
+    def __init__(self):
+        self.nlp = spacy.load("en_core_web_sm")
+        ruler = self.nlp.add_pipe("entity_ruler", before="ner")
+        patterns = [
+            {"label": "ORG", "pattern": "Bursa Malaysia"},
+            {"label": "ORG", "pattern": "FTSE Bursa Malaysia KLCI"},
+            {"label": "ORG", "pattern": "FBM KLCI"},
+            {"label": "ORG", "pattern": "Maybank"},
+            {"label": "ORG", "pattern": "CIMB"},
+            {"label": "ORG", "pattern": "Public Bank"},
+            {"label": "GPE", "pattern": "Kuala Lumpur"},
         ]
+        ruler.add_patterns(patterns)
 
-        print(f"\nJudul Artikel : {title[:80]}...")
-        print(f"Jumlah Entitas: {len(entities)}")
-        print(
-            f"Entitas Sampel (3 Teratas): {json.dumps(entities[:3], indent=2)}"
-        )
+    def extract(self, text):
+        doc = self.nlp(text)
+        return [{"text": ent.text, "label": ent.label_, "start": ent.start_char, "end": ent.end_char} for ent in doc.ents]
 
+def evaluate_model(model, eval_data, labels):
+    tp_total, fp_total, fn_total = 0, 0, 0
+    label_stats = {l: {"tp": 0, "fp": 0, "fn": 0} for l in labels}
+
+    for item in eval_data:
+        text = item["text"]
+        expected_set = {(e["text"], e["label"]) for e in item.get("expected_entities", [])}
+        preds = model.extract(text)
+        pred_set = {(e["text"], e["label"]) for e in preds}
+
+        tp_set = expected_set.intersection(pred_set)
+        fp_set = pred_set - expected_set
+        fn_set = expected_set - pred_set
+
+        tp_total += len(tp_set)
+        fp_total += len(fp_set)
+        fn_total += len(fn_set)
+
+        for text_val, lbl in tp_set:
+            if lbl in label_stats:
+                label_stats[lbl]["tp"] += 1
+        for text_val, lbl in fp_set:
+            if lbl in label_stats:
+                label_stats[lbl]["fp"] += 1
+        for text_val, lbl in fn_set:
+            if lbl in label_stats:
+                label_stats[lbl]["fn"] += 1
+
+    p_over = tp_total / (tp_total + fp_total) if (tp_total + fp_total) > 0 else 0.0
+    r_over = tp_total / (tp_total + fn_total) if (tp_total + fn_total) > 0 else 0.0
+    f1_over = 2 * p_over * r_over / (p_over + r_over) if (p_over + r_over) > 0 else 0.0
+
+    print(f"Overall Exact-Span Precision : {p_over:.4f}")
+    print(f"Overall Exact-Span Recall    : {r_over:.4f}")
+    print(f"Overall Exact-Span F1-Score  : {f1_over:.4f}\n")
+    print("--- Breakdown Metrik Per-Label ---")
+
+    for lbl in sorted(labels):
+        tp = label_stats[lbl]["tp"]
+        fp = label_stats[lbl]["fp"]
+        fn = label_stats[lbl]["fn"]
+        p = tp / (tp + fp) if (tp + fp) > 0 else 0.0
+        r = tp / (tp + fn) if (tp + fn) > 0 else 0.0
+        f1 = 2 * p * r / (p + r) if (p + r) > 0 else 0.0
+        print(f"Label {lbl:<12} | Precision: {p:.4f} | Recall: {r:.4f} | F1-Score: {f1:.4f}")
+
+def run_training_and_eval():
+    print("Memuat Model Baseline vs Adapted...\n")
+    
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    eval_path = os.path.join(base_dir, "evaluation_examples.json")
+    val_path = os.path.join(base_dir, "data", "processed", "val.csv")
+
+    with open(eval_path, "r", encoding="utf-8") as f:
+        eval_data = json.load(f)
+
+    labels = ["CARDINAL", "DATE", "EVENT", "GPE", "MONEY", "NORP", "ORDINAL", "ORG", "PERCENT", "PERSON", "PRODUCT", "QUANTITY", "TIME", "WORK_OF_ART"]
+
+    baseline_model = BaselineNER()
+    adapted_model = AdaptedNER()
+
+    print("=== HASIL EVALUASI METRIK QUANTITATIVE (Baseline (en_core_web_sm)) ===")
+    evaluate_model(baseline_model, eval_data, labels)
+    print("\n")
+
+    print("=== HASIL EVALUASI METRIK QUANTITATIVE (Adapted (Calibrated Rules)) ===")
+    evaluate_model(adapted_model, eval_data, labels)
+    print("\n")
+
+    # Evaluasi Sampel Val Set
+    if os.path.exists(val_path):
+        val_df = pd.read_csv(val_path)
+        print("=== HASIL EKSTRAKSI SAMPLE VAL SET ===\n")
+        for i in range(min(2, len(val_df))):
+            row = val_df.iloc[i]
+            title = str(row["title"])
+            full_text = str(row["full_text"])
+            ents = adapted_model.extract(full_text)
+            
+            print(f"Judul Artikel : '{title[:65]}...'")
+            print(f"Jumlah Entitas: {len(ents)}")
+            print("Entitas Sampel (3 Teratas): [")
+            for e in ents[:3]:
+                print("  {")
+                print(f'    "text": "{e["text"]}",')
+                print(f'    "label": "{e["label"]}",')
+                print(f'    "start": {e["start"]},')
+                print(f'    "end": {e["end"]}')
+                print("  }" if e == ents[:3][-1] else "  },")
+            print("]\n")
 
 if __name__ == "__main__":
-    print("Memuat Model Baseline vs Adapted...")
-
-    nlp_baseline = spacy.load("en_core_web_sm")
-    evaluate_ground_truth(nlp_baseline, "Baseline (en_core_web_sm)")
-
-    nlp_adapted = create_adapted_nlp()
-    evaluate_ground_truth(nlp_adapted, "Adapted (Calibrated Rules)")
-
-    sample_val_extraction(nlp_adapted)
+    run_training_and_eval()

@@ -1,0 +1,18 @@
+==================================================
+LAPORAN PEMBAGIAN DATA (DATA SPLIT SUMMARY)
+==================================================
+Random Seed        : 42
+Total Data Bersih  : 581 artikel (Bahasa Inggris)
+
+1. Training Set (70%):
+   - Jumlah Dokumen: 406 baris
+   - File Path     : data/processed/train.csv
+
+2. Validation Set (15%):
+   - Jumlah Dokumen: 87 baris
+   - File Path     : data/processed/val.csv
+
+3. Test Set (15%):
+   - Jumlah Dokumen: 88 baris
+   - File Path     : data/processed/test.csv
+==================================================

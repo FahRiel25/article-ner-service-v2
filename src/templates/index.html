@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article NER Service v2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        .container { max-width: 900px; margin-top: 40px; }
+        .entity-badge { font-size: 0.9em; margin-right: 4px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card shadow-sm mb-4">
+            <div class="card-header bg-primary text-white">
+                <h3 class="mb-0">Article Named-Entity Recognition (NER) Service</h3>
+            </div>
+            <div class="card-body">
+                <form id="ner-form">
+                    <div class="mb-3">
+                        <label for="title" class="form-label font-weight-bold">Judul Artikel:</label>
+                        <input type="text" class="form-control" id="title" placeholder="Masukkan judul berita keuangan..." required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="body" class="form-label font-weight-bold">Bodi Artikel:</label>
+                        <textarea class="form-control" id="body" rows="6" placeholder="Masukkan isi/bodi berita..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100" id="submit-btn">Ekstrak Entitas</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="results-card" class="card shadow-sm d-none">
+            <div class="card-header bg-success text-white d-flex justify-content-between align-items-center">
+                <h4 class="mb-0">Hasil Ekstraksi Entitas</h4>
+                <span id="entity-count-badge" class="badge bg-light text-dark">0 Entitas</span>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Teks Entitas</th>
+                                <th>Label / Kategori</th>
+                                <th>Karakter Awal (Start)</th>
+                                <th>Karakter Akhir (End)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="entities-table-body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('ner-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const title = document.getElementById('title').value;
+            const body = document.getElementById('body').value;
+            const submitBtn = document.getElementById('submit-btn');
+            const resultsCard = document.getElementById('results-card');
+            const tableBody = document.getElementById('entities-table-body');
+            const countBadge = document.getElementById('entity-count-badge');
+
+            submitBtn.disabled = true;
+            submitBtn.innerText = 'Memproses Ekstraksi...';
+
+            try {
+                const response = await fetch('/extract-entities', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ title: title, body: body })
+                });
+
+                if (!response.ok) {
+                    const errData = await response.json();
+                    alert('Error: ' + (errData.detail || 'Gagal mengekstrak entitas.'));
+                    return;
+                }
+
+                const data = await response.json();
+                tableBody.innerHTML = '';
+                
+                countBadge.innerText = `${data.meta.entity_count} Entitas Ditemukan`;
+
+                if (data.entities.length === 0) {
+                    tableBody.innerHTML = '<tr><td colspan="5" class="text-center">Tidak ada entitas yang terdeteksi.</td></tr>';
+                } else {
+                    data.entities.forEach((ent, index) => {
+                        const row = `
+                            <tr>
+                                <td>${index + 1}</td>
+                                <td><strong>${ent.text}</strong></td>
+                                <td><span class="badge bg-info text-dark entity-badge">${ent.label}</span></td>
+                                <td>${ent.start}</td>
+                                <td>${ent.end}</td>
+                            </tr>
+                        `;
+                        tableBody.innerHTML += row;
+                    });
+                }
+
+                resultsCard.classList.remove('d-none');
+            } catch (err) {
+                alert('Koneksi gagal: ' + err.message);
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerText = 'Ekstrak Entitas';
+            }
+        });
+    </script>
+</body>
+</html>
